@@ -118,8 +118,7 @@ public class CtSph implements Sph {
         throws BlockException {
         Context context = ContextUtil.getContext();
         if (context instanceof NullContext) {
-            // The {@link NullContext} indicates that the amount of context has exceeded the threshold,
-            // so here init the entry only. No rule checking will be done.
+            // The {@link NullContext} indicates that the amount of context has exceeded the threshold, so here init the entry only. No rule checking will be done.
             return new CtEntry(resourceWrapper, null, context);
         }
 

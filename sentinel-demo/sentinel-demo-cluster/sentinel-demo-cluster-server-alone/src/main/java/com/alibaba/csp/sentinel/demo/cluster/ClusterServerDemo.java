@@ -17,6 +17,7 @@ package com.alibaba.csp.sentinel.demo.cluster;
 
 import java.util.Collections;
 
+import com.alibaba.csp.sentinel.cluster.flow.rule.ClusterFlowRuleManager;
 import com.alibaba.csp.sentinel.cluster.server.ClusterTokenServer;
 import com.alibaba.csp.sentinel.cluster.server.SentinelDefaultTokenServer;
 import com.alibaba.csp.sentinel.cluster.server.config.ClusterServerConfigManager;
@@ -33,6 +34,13 @@ import com.alibaba.csp.sentinel.cluster.server.config.ServerTransportConfig;
 public class ClusterServerDemo {
 
     public static void main(String[] args) throws Exception {
+
+//        // Supplier 类型：接受 namespace，返回生成的动态规则源，类型为 SentinelProperty<List<FlowRule>>
+//        // ClusterFlowRuleManager 针对集群限流规则，ClusterParamFlowRuleManager 针对集群热点规则，配置方式类似
+//        ClusterFlowRuleManager.setPropertySupplier(namespace -> {
+//
+//        });
+
         // Not embedded mode by default (alone mode).
         ClusterTokenServer tokenServer = new SentinelDefaultTokenServer();
 
